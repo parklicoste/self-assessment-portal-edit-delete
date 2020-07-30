@@ -355,7 +355,7 @@ render() {
                           <Modal.Title>Delete Project</Modal.Title>
                         </Modal.Header>
                         <Modal.Body>
-                    <p>Are you sure you want to delete this student with Student Id <b>{this.state.studentId}</b> and First Name <b>{this.state.firstname}</b> Project.
+                    <p>Are you sure you want to delete this student with Student Id <b>{this.state.studentId}</b> and First Name <b>{this.state.firstname}</b> Project?
                           </p>
                         </Modal.Body>
 

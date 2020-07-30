@@ -395,7 +395,7 @@ class UserAccessRole extends React.Component {
 
                         <Modal.Body>
                         <p>Are you sure you want to delete user with User ID <b>{this.state.userId}</b> and First Name <b>{this.state.firstname }</b>, Doing this will also delete the project associated with this User
-                            in the sapportal database.
+                            in the sapportal database?
                           </p>
                         </Modal.Body>
 

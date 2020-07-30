@@ -167,7 +167,7 @@ class User extends React.Component {
 
                         <Modal.Body>
                           <p>Are you sure you want to delete this User Id <b>{this.state.userId}</b>, First Name <b>{this.state.firstname }</b>, Doing this will also delete all the projects associated with this User Id
-                            in the sapportal database. <br></br> Thank You!
+                            in the sapportal database?
                           </p>
                         </Modal.Body>
 

@@ -67,13 +67,32 @@ lastNamechange = event =>{
         emptyEmail: true
       })
     }
-    else{
+    
+    else if ((!this.state.email.includes('@')) || (!this.state.email.includes('.'))){
       this.setState({
-        show: false,
-        emptyEmail: false
+        show: true,
+        emptyEmail: true
       })
-      this.submit(event, id)
     }
+  else if(this.state.email.includes('@') || this.state.email.includes('.')){
+      let lastAtPos = this.state.email.lastIndexOf('@');
+      let lastDotPos = this.state.email.lastIndexOf('.');
+
+      if (!(lastAtPos < lastDotPos && lastAtPos > 0 && this.state.email.indexOf('@@') == -1 && lastDotPos > 2 && (this.state.email.length - lastDotPos) > 2)) {
+        this.setState({
+          show: true,
+          emptyEmail: true
+        })
+       }
+       else{
+        this.setState({
+          show: false,
+          errorEmail: false,
+          emptyUserId: false
+        })
+        this.submit(event, id)
+       }
+}
   }
 
 submit(event, id){
@@ -131,7 +150,8 @@ getone(id){
       email: res.data.email,
       id:res.data._ID,
       show: true,
-      message: 'Edit Faculty'
+      message: 'Edit Faculty',
+      emptyEmail: false
     })
   })
 }
@@ -181,7 +201,7 @@ render() {
                     <div className="form-group">
                       <input type="email" onChange={(e)=>{this.emailchange(e)}} className="form-control" placeholder="Email" value={this.state.email} />
                     </div>
-                    {this.state.emptyEmail ? <div><p className="text-danger">Error! The email id cannot be empty</p></div> : this.state.showEmailError ? <div><p className="text-danger">Error! This email id already exists in faculty database please use a different one.</p></div> : null}
+                    {this.state.emptyEmail ? <div><p className="text-danger">Error! The email id cannot be empty or syntax is wrong.</p></div> : this.state.showEmailError ? <div><p className="text-danger">Error! This email id already exists in faculty database please use a different one.</p></div> : null}
                   </Modal.Body>
                   <Modal.Footer>
                     <Button variant="secondary" onClick={this.handleClose}>
@@ -198,7 +218,7 @@ render() {
                         </Modal.Header>
 
                         <Modal.Body>
-                          <p>Are you sure you want to delete this Faculty with First Name <b>{this.state.firstname}</b>.</p>
+                          <p>Are you sure you want to delete this Faculty with First Name <b>{this.state.firstname}</b>?</p>
                         </Modal.Body>
 
                         <Modal.Footer>
