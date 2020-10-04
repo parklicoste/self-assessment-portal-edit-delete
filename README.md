@@ -25,9 +25,9 @@ python3 -m flask run
 
 ## Now, go into the public folder type the following commands:-
 
-npm install
-npm i axios --save
-npm install react-bootstrap bootstrap
-npm start
+1)  npm install
+2)  npm i axios --save
+3)  npm install react-bootstrap bootstrap
+4)  npm start
 
 for more instructions, refer to README.md in public folder
