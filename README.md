@@ -71,12 +71,6 @@ export FLASK_DEBUG=True
 flask run
 ```
 
-or
-
-```
-python3 -m flask run
-```
-
 ### Now, go into the public folder type the following commands:-
 
 ```
