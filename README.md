@@ -19,13 +19,7 @@ python3 -m venv env
 
 ```
 source env/bin/activate
-```
-
-```
 export FLASK_APP=app.py
-```
-
-```
 export FLASK_DEBUG=True
 ```
 
@@ -45,17 +39,8 @@ python3 -m flask run
 
 ```
 npm install
-```
-
-```
 npm i axios --save
-```
-
-```
 npm install react-bootstrap bootstrap
-```
-
-```
 npm start
 ```
 
