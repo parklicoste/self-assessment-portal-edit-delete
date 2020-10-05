@@ -1,21 +1,21 @@
-# sapportal-edit-delete-part
+# Self-Assessment Portal edit and delete
 
-### To run this project in Linux
+## To run this project in LINUX: -
 
-## To install virtal environment, follow the command below:-
+### To install virtal environment, follow the command below:-
 
 ```
 python3 -m install --user virtualenv
 pip3 install virtualenv
 ```
 
-## make the environment using the command below
+### make the environment using the command below
 
 ```
 python3 -m venv env
 ```
 
-## To run the program follow the commands below:-
+### To run the program follow the commands below:-
 
 ```
 source env/bin/activate
@@ -23,7 +23,7 @@ export FLASK_APP=app.py
 export FLASK_DEBUG=True
 ```
 
-## Run the flask app
+### Run the flask app
 
 ```
 flask run
@@ -35,7 +35,7 @@ or
 python3 -m flask run
 ```
 
-## Now, go into the public folder type the following commands:-
+### Now, go into the public folder type the following commands:-
 
 ```
 npm install
