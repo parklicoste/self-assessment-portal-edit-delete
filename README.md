@@ -18,7 +18,7 @@ python3 -m venv env
 ### To run the program follow the commands below:-
 
 ```
-pip install -r requirements.txt
+pip install -r requirement.txt
 source env/bin/activate
 export FLASK_APP=app.py
 export FLASK_DEBUG=True
