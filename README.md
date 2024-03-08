@@ -54,16 +54,16 @@ pip install virtualenv
 ### Make the environment using the command below, and make sure the current working directory is the project folder
 
 ```
-virtualenv env
+python -m virtualenv venv  
 py -m pip install requirements.txt
 ```
 
 ### To run the program follow the commands below:-
 
 ```
-\env\Scripts\activate.bat
-export FLASK_APP=app.py
-export FLASK_DEBUG=True
+.\venv\Scripts\activate.bat
+set FLASK_APP=app.py
+set FLASK_DEBUG=True
 ```
 
 ### Run the flask app
